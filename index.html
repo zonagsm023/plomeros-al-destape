@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plomeros Al Destape | Destapamos rápido y sin daños 24/7</title>
+    <meta name="description" content="Servicio de plomería urgente 24/7. Destape de cañerías, inodoros, lavaplatos y detección de fugas sin romper. Atención inmediata al 300 302 8182.">
+    <!-- Favicon -->
+    <link rel="icon" href="logo.jpg" type="image/jpeg">
+    <!-- Fuente profesional de Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        /* --- VARIABLES DE COLOR --- */
+        :root {
+            --azul-oscuro-logo: #15223b;
+            --azul-claro-logo: #0066cc;
+            --celeste-fondo: #f0f7ff;
+            --gris-texto: #4b5563;
+            --blanco: #ffffff;
+            --whatsapp: #25d366;
+        }
+
+        /* --- ESTILOS GENERALES --- */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        body {
+            background-color: var(--blanco);
+            color: var(--gris-texto);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* --- BOTONES --- */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            padding: 14px 28px;
+            border-radius: 8px;
+            font-weight: 700;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: none;
+            font-size: 16px;
+        }
+
+        .btn-primary {
+            background-color: var(--azul-oscuro-logo);
+            color: var(--blanco);
+        }
+
+        .btn-primary:hover {
+            background-color: #0d1526;
+            transform: translateY(-2px);
+        }
+
+        .btn-whatsapp {
+            background-color: var(--whatsapp);
+            color: var(--blanco);
+        }
+
+        .btn-whatsapp:hover {
+            background-color: #1ebd53;
+            transform: translateY(-2px);
+        }
+
+        /* --- HEADER --- */
+        header {
+            background-color: var(--blanco);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 85px;
+        }
+
+        .logo-nav {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+        }
+
+        .logo-nav img {
+            height: 60px;
+            width: auto;
+            object-fit: contain;
+        }
+
+        .logo-brand-text {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .logo-brand-text strong {
+            color: var(--azul-oscuro-logo);
+            font-size: 20px;
+            font-weight: 900;
+            line-height: 1.1;
+        }
+
+        .logo-brand-text span {
+            color: var(--azul-claro-logo);
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 2px;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--azul-oscuro-logo);
+            font-weight: 600;
+            font-size: 15px;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--azul-claro-logo);
+        }
+
+        /* --- HERO --- */
+        .hero {
+            background: linear-gradient(135deg, var(--celeste-fondo) 0%, var(--blanco) 100%);
+            padding: 80px 0;
+        }
+
+        .hero-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 50px;
+        }
+
+        .hero-text {
+            flex: 1.2;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            background-color: rgba(0, 102, 204, 0.12);
+            color: var(--azul-claro-logo);
+            padding: 6px 16px;
+            border-radius: 30px;
+            font-weight: 700;
+            font-size: 13px;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .hero-text h1 {
+            font-size: 48px;
+            font-weight: 900;
+            color: var(--azul-oscuro-logo);
+            line-height: 1.15;
+            margin-bottom: 20px;
+        }
+
+        .hero-text h1 span {
+            color: var(--azul-claro-logo);
+        }
+
+        .hero-text p {
+            font-size: 18px;
+            margin-bottom: 30px;
+            max-width: 560px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .hero-image {
+            flex: 0.8;
+            display: flex;
+            justify-content: center;
+        }
+
+        .logo-wrapper {
+            background: var(--blanco);
+            padding: 30px;
+            border-radius: 24px;
+            box-shadow: 0 20px 50px rgba(21, 34, 59, 0.12);
+            max-width: 400px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .logo-wrapper img {
+            width: 100%;
+            height: auto;
+            border-radius: 12px;
+        }
+
+        /* --- SERVICIOS --- */
+        .servicios {
+            padding: 80px 0;
+            background-color: var(--blanco);
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title h2 {
+            font-size: 36px;
+            color: var(--azul-oscuro-logo);
+            font-weight: 900;
+        }
+
+        .section-title p {
+            font-size: 17px;
+            max-width: 600px;
+            margin: 12px auto 0;
+        }
+
+        .grid-servicios {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+        }
+
+        .card-servicio {
+            background: var(--blanco);
+            border: 1px solid #e5e7eb;
+            border-radius: 16px;
+            padding: 35px 28px;
+            transition: all 0.3s;
+            text-align: center;
+        }
+
+        .card-servicio:hover {
+            border-color: var(--azul-claro-logo);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.06);
+            transform: translateY(-5px);
+        }
+
+        .icon-servicio {
+            width: 68px;
+            height: 68px;
+            background-color: var(--celeste-fondo);
+            color: var(--azul-claro-logo);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            font-size: 30px;
+        }
+
+        .card-servicio h3 {
+            font-size: 21px;
+            color: var(--azul-oscuro-logo);
+            margin-bottom: 12px;
+            font-weight: 800;
+        }
+
+        /* --- POR QUÉ ELEGIRNOS (GARANTÍAS) --- */
+        .beneficios {
+            background-color: var(--celeste-fondo);
+            padding: 70px 0;
+        }
+
+        .grid-beneficios {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 25px;
+            text-align: center;
+        }
+
+        .item-beneficio {
+            background: var(--blanco);
+            padding: 25px 20px;
+            border-radius: 14px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.03);
+        }
+
+        .item-beneficio strong {
+            display: block;
+            color: var(--azul-oscuro-logo);
+            font-size: 18px;
+            margin-bottom: 8px;
+        }
+
+        /* --- FOOTER --- */
+        footer {
+            background-color: var(--azul-oscuro-logo);
+            color: var(--blanco);
+            padding: 60px 0 30px;
+            text-align: center;
+        }
+
+        footer h2 {
+            font-size: 30px;
+            margin-bottom: 12px;
+            font-weight: 800;
+        }
+
+        footer p {
+            color: #cbd5e1;
+            margin-bottom: 25px;
+            font-size: 16px;
+        }
+
+        .pagos-info {
+            margin-top: 25px;
+            font-size: 14px;
+            color: #94a3b8;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #2d3b55;
+            padding-top: 20px;
+            margin-top: 40px;
+            font-size: 14px;
+            color: #94a3b8;
+        }
+
+        /* --- BOTÓN FLOTANTE DE WHATSAPP --- */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            background-color: var(--whatsapp);
+            color: var(--blanco);
+            padding: 14px 20px;
+            border-radius: 50px;
+            font-weight: 700;
+            text-decoration: none;
+            box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4);
+            z-index: 999;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: transform 0.3s ease;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.05);
+        }
+
+        /* --- RESPONSIVE (CELULARES) --- */
+        @media (max-width: 900px) {
+            nav ul {
+                display: none;
+            }
+            .hero {
+                padding: 50px 0;
+            }
+            .hero-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            .hero-text h1 {
+                font-size: 36px;
+            }
+            .hero-text p {
+                margin: 0 auto 25px;
+            }
+            .hero-buttons {
+                flex-direction: column;
+            }
+            .logo-wrapper {
+                max-width: 300px;
+                padding: 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .nav-container {
+                height: 75px;
+            }
+            .logo-nav img {
+                height: 45px;
+            }
+            .logo-brand-text strong {
+                font-size: 16px;
+            }
+            .btn-header {
+                padding: 10px 14px;
+                font-size: 13px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <div class="container nav-container">
+            <a href="#" class="logo-nav">
+                <img src="logo.jpg" alt="Logo Plomeros Al Destape">
+                <div class="logo-brand-text">
+                    <strong>PLOMEROS</strong>
+                    <span>AL DESTAPE</span>
+                </div>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="#servicios">Servicios</a></li>
+                    <li><a href="#garantias">Garantías</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </nav>
+            <a href="tel:+573003028182" class="btn btn-primary btn-header">📞 Llamar</a>
+        </div>
+    </header>
+
+    <!-- SECCIÓN PRINCIPAL (HERO) -->
+    <section class="hero">
+        <div class="container hero-content">
+            <div class="hero-text">
+                <span class="hero-badge">Atención de Emergencias 24/7</span>
+                <h1>Destapamos <span>rápido</span> y sin daños</h1>
+                <p>¿Inodoros tapados, tuberías obstruidas o fugas de agua? En <strong>Plomeros Al Destape</strong> contamos con sonda eléctrica e hidrojet para solucionar tu emergencia de inmediato y sin romper.</p>
+                <div class="hero-buttons">
+                    <a href="tel:+573003028182" class="btn btn-primary">
+                        📞 300 302 8182
+                    </a>
+                    <a href="https://wa.me/573003028182?text=Hola%20Plomeros%20Al%20Destape,%20necesito%20ayuda%20con%20un%20servicio%20de%20plomer%C3%ADa." target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp">
+                        💬 Escribir por WhatsApp
+                    </a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="logo-wrapper">
+                    <img src="logo.jpg" alt="Plomeros Al Destape - Destapamos rápido y sin daños">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN DE SERVICIOS -->
+    <section id="servicios" class="servicios">
+        <div class="container">
+            <div class="section-title">
+                <h2>Nuestros Servicios</h2>
+                <p>Soluciones efectivas para tu hogar, edificio o empresa, cuidando tus pisos y paredes.</p>
+            </div>
+            
+            <div class="grid-servicios">
+                <div class="card-servicio">
+                    <div class="icon-servicio">🚽</div>
+                    <h3>Destape de Tuberías</h3>
+                    <p>Desobstrucción rápida de inodoros, lavaplatos, sifones, cajas de inspección y bajantes con sonda eléctrica e hidrojet.</p>
+                </div>
+                <div class="card-servicio">
+                    <div class="icon-servicio">💧</div>
+                    <h3>Detección de Fugas</h3>
+                    <p>Localizamos filtraciones, humedades y fugas de agua ocultas con equipos especializados, evitando demoliciones innecesarias.</p>
+                </div>
+                <div class="card-servicio">
+                    <div class="icon-servicio">🔧</div>
+                    <h3>Plomería General</h3>
+                    <p>Reparación e instalación de griferías, sanitarios, registros, bombas de agua, tanques y mantenimiento preventivo.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN DE GARANTÍAS -->
+    <section id="garantias" class="beneficios">
+        <div class="container">
+            <div class="section-title">
+                <h2>¿Por qué elegirnos?</h2>
+            </div>
+            <div class="grid-beneficios">
+                <div class="item-beneficio">
+                    <strong>⚡ Llegada Rápida</strong>
+                    <p>Atención prioritaria para emergencias las 24 horas, todos los días.</p>
+                </div>
+                <div class="item-beneficio">
+                    <strong>🛡️ Sin Romper</strong>
+                    <p>Herramientas modernas para destapar sin dañar tu cerámica ni tuberías.</p>
+                </div>
+                <div class="item-beneficio">
+                    <strong>✅ Trabajo Garantizado</strong>
+                    <p>Técnicos expertos con respaldo y garantía en cada servicio realizado.</p>
+                </div>
+                <div class="item-beneficio">
+                    <strong>💳 Pagos Fáciles</strong>
+                    <p>Aceptamos efectivo, Nequi, Daviplata y transferencias bancarias.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER / CONTACTO -->
+    <footer id="contacto">
+        <div class="container">
+            <h2>¿Necesitas un plomero ahora mismo?</h2>
+            <p>Cotiza tu servicio por llamada o WhatsApp sin compromiso.</p>
+            <div style="display: flex; justify-content: center; gap: 15px; flex-wrap: wrap;">
+                <a href="tel:+573003028182" class="btn btn-primary" style="background-color: var(--blanco); color: var(--azul-oscuro-logo);">📞 Llamar: 300 302 8182</a>
+                <a href="https://wa.me/573003028182?text=Hola%20Plomeros%20Al%20Destape,%20necesito%20cotizar%20un%20servicio." target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp">💬 Contactar por WhatsApp</a>
+            </div>
+            <p class="pagos-info">Atención residencial, comercial e industrial • Servicio 24/7</p>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 Plomeros Al Destape. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- BOTÓN FLOTANTE DE WHATSAPP -->
+    <a href="https://wa.me/573003028182?text=Hola%20Plomeros%20Al%20Destape,%20tengo%20una%20emergencia%20de%20plomer%C3%ADa." class="whatsapp-float" target="_blank" rel="noopener noreferrer">
+        💬 WhatsApp 24/7
+    </a>
+
+</body>
+</html>
